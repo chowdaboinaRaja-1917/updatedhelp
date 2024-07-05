@@ -1,0 +1,17 @@
+<div class="Container">
+    <div class="Content">
+        <div class="{{ClsName}}">
+            <div class="ParentCard">
+                <div style="font-size: 20px; text-decoration: underline; padding: 8px; color: green;">Hi! iam Parent
+                </div>
+                <img src="https://t4.ftcdn.net/jpg/01/38/71/15/360_F_138711505_K9YfscnIghBdBE1MvQbgUGixdRNKEg2P.jpg"
+                    alt="" height="200" width="200" style="border-radius: 0px 10px 10px 0px;">
+            </div>
+        </div>
+        <div class="Child_Container">
+           <div class="Childcmp">
+            <app-child (change)="onChangecls($event)"></app-child>
+           </div>
+        </div>
+    </div>
+</div>

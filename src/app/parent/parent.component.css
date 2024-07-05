@@ -1,0 +1,110 @@
+.Container{
+    height:570px;
+    width: 75vh;
+    background-color: #ff0266;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+.Container:before {
+    content: "";
+    height:800px;
+    width: 50vh;
+    background: #00f;
+    animation: animate 4s linear infinite;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Container:after {
+    content: "";
+    inset: 5px;
+    position: absolute;
+    background-color: #ff0266;
+}
+.Content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+    gap: 20px;
+}
+.ParentCard{
+    display: flex;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 15px;
+}
+.ParentCard:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+.ShowParent{
+    visibility: visible;
+    transition: 1.5s;
+    display: flex;
+}
+.HideParent{
+    transform: scale(0.001) rotate(360deg);
+    transition: 1.5s;
+    visibility: hidden;
+}
+.Child_Container{
+    padding:15px;
+    width: 53vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.Child_Container:before {
+    content: "";
+    height: 70vh;
+    width: 20vh;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    animation: animate2 4s linear infinite;
+}
+.Child_Container:after {
+    content: "";
+    inset: 5px;
+    position: absolute;
+    background-color: #fff;
+}
+.Child_Container:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+.Childcmp{
+    z-index: 2;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
